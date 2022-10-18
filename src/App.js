@@ -5,11 +5,42 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import './App.css';
 
 const App = () => {
+
+  const activeMenu = true
+
   return (
     <h1 className='underline text-3xl'>The Title</h1>,
     <h1 className='underline text-3xl'>The tTitle</h1>,
     <h2 className='underline text-3xl'> happy</h2>,
+    <div>
+      <BrowserRouter>
+        <div className='flex relative dark:bg-main-dark-bg'>
+          <div className='fixed right-4 bottom-4' style={ {zIndex: '1000'} }>
+            <TooltipComponent content='Settings' position='Top'>
+              <button 
+              type='button' 
+              className='text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white'
+              style = { {background: 'crimson' , borderRadius: '50%'}}>
+                <FiSettings/>
+              </button>  
+            </TooltipComponent>            
+          </div>
 
+          
+          {activeMenu ?(
+            <div className='w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white'>
+              Sidebar
+            </div>
+
+          ):(
+            <div className='w-0 dark:bg-secondary-dark-bg'>
+              Sidebar
+            </div>
+          )}
+        </div>
+      </BrowserRouter>
+
+    </div>
 
   )
 }

@@ -62,7 +62,7 @@ const App = () => {
 
               {/* Applications */}
               <Route path="/editor" element="Editor" />
-              <Route path="/color-themes" element="ColorThemes" />
+              <Route path="/color-theme" element="ColorTheme" />
               <Route path="/calender" element="Calender" />
               <Route path="/workflow" element="Workflow" />
 
@@ -72,6 +72,7 @@ const App = () => {
               <Route path="/color-mapping" element="ColorMapping" />
               <Route path="/financial" element="Financial" />
               <Route path="/line" element="Line" />
+              <Route path="/pie" element="Pie" />
               <Route path="/pyramid" element="Pyramid" />
               <Route path="/stacked" element="Stacked" />
             </Routes>

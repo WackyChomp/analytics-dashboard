@@ -37,6 +37,45 @@ const App = () => {
               Sidebar
             </div>
           )}
+
+          <div className={ 
+            `dark:bg-main-bg bg-main-bg min-h-screen w-full 
+            ${activeMenu ? 'md:ml-72': 'flex-2'}`
+            }>
+            <div className='fixed md:static bg-main-bg:bg-main-dark-bg navbar w-full'>
+              Navbar
+            </div>
+          </div>
+
+          <div>
+            <Routes>
+              {/* Main Dashboard */}
+              <Route path="/" element="eCommerce" />
+              <Route path="/ecomerce" element="eCommerce" />
+
+              {/* Pages */}
+              <Route path="/customers" element="eCommerce" />
+              <Route path="/orders" element="Order" />
+              <Route path="/employees" element="Employees" />
+              <Route path="/moderators" element="Moderators" />
+              <Route path="/partners" element="Partners" />
+
+              {/* Applications */}
+              <Route path="/editor" element="Editor" />
+              <Route path="/color-themes" element="ColorThemes" />
+              <Route path="/calender" element="Calender" />
+              <Route path="/workflow" element="Workflow" />
+
+              {/* Data Visualizations */}
+              <Route path="/area" element="Area" />
+              <Route path="/bar" element="Bar" />
+              <Route path="/color-mapping" element="ColorMapping" />
+              <Route path="/financial" element="Financial" />
+              <Route path="/line" element="Line" />
+              <Route path="/pyramid" element="Pyramid" />
+              <Route path="/stacked" element="Stacked" />
+            </Routes>
+          </div>
         </div>
       </BrowserRouter>
 

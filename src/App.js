@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
+import { Navbar, Footer, Sidebar, ColorTheme } from './components';
+import { Area,Bar,ColorMapping,Financial,Line,Pie,Pyramid,Stacked ,
+Calendar,ColorThemes,Customers,Ecommerce,Editor,Employees,Orders,Kanban } from './pages';
 import './App.css';
 
 const App = () => {
@@ -50,19 +53,19 @@ const App = () => {
           <div>
             <Routes>
               {/* Main Dashboard */}
-              <Route path="/" element="eCommerce" />
-              <Route path="/ecomerce" element="eCommerce" />
+              <Route path="/" element="Ecommerce" />
+              <Route path="/ecomerce" element="Ecommerce" />
 
               {/* Pages */}
-              <Route path="/customers" element="eCommerce" />
-              <Route path="/orders" element="Order" />
+              <Route path="/customers" element="Customers" />
+              <Route path="/orders" element="Orders" />
               <Route path="/employees" element="Employees" />
               <Route path="/moderators" element="Moderators" />
               <Route path="/partners" element="Partners" />
 
               {/* Applications */}
               <Route path="/editor" element="Editor" />
-              <Route path="/color-theme" element="ColorTheme" />
+              <Route path="/color-theme" element="ColorThemes" />
               <Route path="/calender" element="Calender" />
               <Route path="/workflow" element="Workflow" />
 

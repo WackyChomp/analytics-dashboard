@@ -5,11 +5,12 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { Navbar, Footer, Sidebar, ColorTheme } from './components';
 import { Area,Bar,ColorMapping,Financial,Line,Pie,Pyramid,Stacked ,
 Calendar,ColorThemes,Customers,Ecommerce,Editor,Employees,Orders,Kanban } from './pages';
+import { useStateContext } from './contexts/ContextProvider';
+
 import './App.css';
 
 const App = () => {
-
-  const activeMenu = true
+  const { activeMenu } = useStateContext();
 
   return (
     <h1 className='underline text-3xl'>The Title</h1>,
@@ -32,12 +33,12 @@ const App = () => {
           
           {activeMenu ?(
             <div className='w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white'>
-              Sidebar
+              <Sidebar/>
             </div>
 
           ):(
             <div className='w-0 dark:bg-secondary-dark-bg'>
-              Sidebar
+              <Sidebar/>
             </div>
           )}
 

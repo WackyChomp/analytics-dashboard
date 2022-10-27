@@ -31,11 +31,48 @@ const Navbar = () => {
 
   return (
     <div className='flex justify-between p-2 md:mx-6 relative'>
-      <NavButton title='Menu' 
-      customFunc={()=> setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
-      color='green'
-      icon={<AiOutlineMenu />}
+      <NavButton 
+        title='Menu' 
+        customFunc={()=> setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
+        color='green'
+        icon={<AiOutlineMenu />}
       />
+
+      <div className="flex">
+        <NavButton
+          title='Cart' 
+          customFunc={() => handleClick('cart')}
+          color='salmon'
+          icon={<FiShoppingCart/>}
+        />
+        <NavButton
+          title='Chat' 
+          customFunc={() => handleClick('chat')}
+          color='salmon'
+          dotColor='#03C9D7'
+          icon={<BsChatLeft/>}
+        />
+        <NavButton
+          title='Notifications' 
+          customFunc={() => handleClick('notification')}
+          color='salmon'
+          icon={<RiNotification3Line/>}
+        />
+        <TooltipComponent
+          content='Profile'
+          position='BottomCenter'
+        >
+          <div className='flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg'
+          onClick={() => handleClick('userProfile')}>
+            <img src="https://images.squarespace-cdn.com/content/v1/55f97542e4b0bd73ff1920e7/0edde3f1-f4b4-4a10-86fc-b4f17c3bbbd5/Bobby_Biolo_0918_HiRes.jpg" 
+            className='rounded-full w-8 h-8' alt="picture of profile" />
+            <p>
+              <span className='text-gray-400 text-14'>Hi, </span> {' '}
+              <span className='text-gray-400 text-14 font-bold ml-1'>Jonathan</span>
+            </p>
+          </div>
+        </TooltipComponent>
+      </div>
     </div>
   )
 }

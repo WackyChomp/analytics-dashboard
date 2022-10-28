@@ -9,6 +9,7 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import avatar from '../data/avatar.jpg';
 import { Cart, Chat, Notification, UserProfile } from '.';
 import { useStateContext } from '../contexts/ContextProvider';
+import { BiWindowOpen } from 'react-icons/bi';
 
 
 const NavButton = ( {title, customFunc, icon, color, dotColor} ) => (
@@ -27,8 +28,23 @@ const NavButton = ( {title, customFunc, icon, color, dotColor} ) => (
 )
 
 const Navbar = () => {
-  const { activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick } = useStateContext();
+  const { activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick, screenSize, setscreenSize } = useStateContext();
+  
+  useEffect(()=>{
+    const handleResize = () => setscreenSize(window.innerWidth);
+      window.addEventListener('resize', handleResize);
+      handleResize();
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
+  useEffect(()=>{
+    if(screenSize <= 800){
+      setActiveMenu(false);
+    } else{
+      setActiveMenu(true);
+    }
+  }, [screenSize]);
+  
   return (
     <div className='flex justify-between p-2 md:mx-6 relative'>
       <NavButton 

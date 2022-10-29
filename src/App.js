@@ -49,13 +49,12 @@ const App = () => {
             <div className='fixed md:static bg-main-bg:bg-main-dark-bg navbar w-full'>
               <Navbar/>
             </div>
-          </div>
 
           <div>
             <Routes>
               {/* Main Dashboard */}
-              <Route path="/" element="Ecommerce" />
-              <Route path="/ecomerce" element="Ecommerce" />
+              <Route path="/" element={<Ecommerce />} />
+              <Route path="/ecommerce" element={<Ecommerce />} />
 
               {/* Pages */}
               <Route path="/customers" element="Customers" />
@@ -80,6 +79,7 @@ const App = () => {
               <Route path="/pyramid" element="Pyramid" />
               <Route path="/stacked" element="Stacked" />
             </Routes>
+          </div>
           </div>
         </div>
       </BrowserRouter>

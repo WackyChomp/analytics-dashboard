@@ -90,7 +90,8 @@ const Ecommerce = () => {
               </div>
 
               <div className="mt-5">
-                <SparkLine
+                <div className="text-3xl font-semibold">SparkLine graph goes here</div>
+                {/* <SparkLine
                   currentColor="blue"
                   id="line-sparkline"
                   type="Line"
@@ -98,15 +99,20 @@ const Ecommerce = () => {
                   width="250px"
                   data={SparklineAreaData}
                   color="blue"
-                />
+                /> */}
               </div>
               <div className="mt-10">
-                <button
-                  color="salmon"
-                  bgColor="navy"
+                <Button
+                  color="navy"
+                  bgColor="salmon"
                   text="Download Report"
                   borderRadius="10px"
                 />
+              </div>
+              
+              <div>
+              <div className="text-3xl font-semibold">Bar graph goes here</div>
+                {/* <Stacked width="320px" height="360px"/> */}
               </div>
             </div>
           </div>

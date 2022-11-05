@@ -2123,9 +2123,18 @@ export const employeesData = [
 
 export const ordersData = [
   {
+    OrderID: 10411,
+    CustomerName: 'Fred',
+    TotalAmount: 2.99,
+    OrderItems: 'Nesquik',
+    Location: 'USA',
+    Status: 'pending',
+    StatusBg: '#FB9678',
+    ProductImage: "https://i5.walmartimages.com/asr/10870d69-6bb1-4560-9242-1216d4615326_1.abac44b87b428fe2ff22779967661c52.jpeg"
+  },
+  {
     OrderID: 10248,
     CustomerName: 'Vinet',
-
     TotalAmount: 32.38,
     OrderItems: 'Fresh Tomato',
     Location: 'USA',
@@ -2269,7 +2278,6 @@ export const ordersData = [
   {
     OrderID: 10248,
     CustomerName: 'Vinet',
-
     TotalAmount: 32.38,
     OrderItems: 'Fresh Tomato',
     Location: 'USA',
@@ -2413,7 +2421,6 @@ export const ordersData = [
   {
     OrderID: 10248,
     CustomerName: 'Vinet',
-
     TotalAmount: 32.38,
     OrderItems: 'Fresh Tomato',
     Location: 'USA',
@@ -2557,7 +2564,6 @@ export const ordersData = [
   {
     OrderID: 10248,
     CustomerName: 'Vinet',
-
     TotalAmount: 32.38,
     OrderItems: 'Fresh Tomato',
     Location: 'USA',
@@ -2701,7 +2707,6 @@ export const ordersData = [
   {
     OrderID: 10248,
     CustomerName: 'Vinet',
-
     TotalAmount: 32.38,
     OrderItems: 'Fresh Tomato',
     Location: 'USA',

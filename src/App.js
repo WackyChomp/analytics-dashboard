@@ -66,7 +66,7 @@ const App = () => {
               {/* Applications */}
               <Route path="/editor" element="Editor" />
               <Route path="/color-theme" element="ColorThemes" />
-              <Route path="/calender" element="Calender" />
+              <Route path="/calendar" element={<Calendar />} />
               <Route path="/workflow" element="Workflow" />
 
               {/* Data Visualizations */}

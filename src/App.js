@@ -67,7 +67,7 @@ const App = () => {
               <Route path="/editor" element="Editor" />
               <Route path="/color-theme" element="ColorThemes" />
               <Route path="/calendar" element={<Calendar />} />
-              <Route path="/workflow" element="Workflow" />
+              <Route path="/kanban" element={<Kanban />} />
 
               {/* Data Visualizations */}
               <Route path="/area" element="Area" />

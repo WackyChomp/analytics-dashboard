@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-import { Navbar, Footer, Sidebar, AppColorTheme } from './components';
+import { Navbar, Footer, Sidebar, AppColorTheme, ThemeSettings } from './components';
 import { Area,Bar,ColorMapping,Financial,Line,Pie,Pyramid,Stacked ,
 Calendar,ColorThemes,Customers,Ecommerce,Editor,Employees,Orders,Kanban } from './pages';
 import { useStateContext } from './contexts/ContextProvider';
@@ -51,6 +51,8 @@ const App = () => {
             </div>
 
           <div>
+            <ThemeSettings />
+            
             <Routes>
               {/* Main Dashboard */}
               <Route path="/" element={<Ecommerce />} />

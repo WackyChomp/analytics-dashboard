@@ -10,7 +10,7 @@ import { useStateContext } from './contexts/ContextProvider';
 import './App.css';
 
 const App = () => {
-  const { activeMenu } = useStateContext();
+  const { activeMenu, themeSettings, setThemeSettings } = useStateContext();
 
   return (
     <h1 className='underline text-3xl'>The Title</h1>,
@@ -24,7 +24,8 @@ const App = () => {
               <button 
               type='button' 
               className='text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white'
-              style = { {background: 'crimson' , borderRadius: '50%'}}>
+              style = { {background: 'crimson' , borderRadius: '50%'}}
+              onClick={() => setThemeSettings(true)}>   {/* becomes true when clicked */}
                 <FiSettings/>
               </button>  
             </TooltipComponent>            
@@ -51,7 +52,7 @@ const App = () => {
             </div>
 
           <div>
-            <ThemeSettings />
+            {themeSettings && <ThemeSettings />}      {/* ThemeSettings only shows if true */}
             
             <Routes>
               {/* Main Dashboard */}

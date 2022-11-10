@@ -7,7 +7,7 @@ import { useStateContext } from '../contexts/ContextProvider';
 
 const ThemeSettings = () => {
 
-  const { setThemeSettings } = useStateContext();
+  const { setColor, currentColor, setMode, currentMode, setThemeSettings } = useStateContext();
 
   return (
     <div className='bg-half-transparent w-screen fixed nav-item top-0 right-0'>
@@ -23,8 +23,10 @@ const ThemeSettings = () => {
             <MdOutlineCancel />
           </button>
         </div>
+
+        {/* Mode Options - choose between different colors */}
         <div className="flex-col border-t-1 border-color p-4 ml-4">
-          <p>Theme Options</p>
+          <p>Mode Options</p>
           {/* Option 1 */}
           <div className="mt-4">
             <input 
@@ -33,8 +35,8 @@ const ThemeSettings = () => {
               name="theme"
               value="Light"
               className="cursor-pointer"
-              onChange={() => setThemeSettings(false)}
-              checked={true}
+              onChange={setMode}
+              checked={currentMode === 'Light'}
             />
             <label
               htmlFor="light"
@@ -51,8 +53,8 @@ const ThemeSettings = () => {
               name="theme"
               value="Dark"
               className="cursor-pointer"
-              onChange={() => {}}
-              checked={true}
+              onChange={setMode}
+              checked={currentMode === "Dark"}
             />
             <label
               htmlFor="dark"
@@ -63,6 +65,8 @@ const ThemeSettings = () => {
           </div>
 
         </div>
+
+        {/* Theme Colors - choose between different colors */}
         <div className="flex-col border-t-1 border-color p-4 ml-4">
           <p>Theme Colors</p>
           <div className="flex gap-3">
@@ -75,9 +79,9 @@ const ThemeSettings = () => {
                 <div className="relative mt-2 cursor-pointer flex gap-5 items-center">
                   <button className='h-10 w-10 rounded-full cursor-pointer'
                   style={{ backgroundColor: item.color}}
-                  onClick={() => {}}
+                  onClick={() => setColor(item.color)}
                   >
-                    <BsCheck className={`ml-2 text-2xl text-white ${false ? 'block' : 'hidden'}`}/>
+                    <BsCheck className={`ml-2 text-2xl text-white ${item.color === currentColor ? 'block' : 'hidden'}`}/>
                   </button>
                 </div>
               </TooltipComponent>

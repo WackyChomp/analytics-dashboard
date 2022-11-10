@@ -27,10 +27,12 @@ export const ContextProvider = ({ children}) => {
     const setColor = (e) =>{
         setCurrentColor(e.target.value);
         localStorage.setItem('colorMode', e.target.value)
+        setThemeSettings(false);        {/* closes themesetting menu when color is selected */}
     }
     const setMode = (e) =>{
         setCurrentMode(e.target.value);
         localStorage.setItem('themeMode', e.target.value)
+        setThemeSettings(false);        {/* closes themesetting menu when mode is selected */}
     }
 
 
@@ -43,7 +45,8 @@ export const ContextProvider = ({ children}) => {
                 screenSize, setscreenSize,
                 currentColor, setCurrentColor,
                 currentMode, setCurrentMode,
-                themeSettings, setThemeSettings
+                themeSettings, setThemeSettings,
+                setColor, setMode
             }}
         >
             {children}

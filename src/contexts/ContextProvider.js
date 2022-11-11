@@ -24,9 +24,9 @@ export const ContextProvider = ({ children}) => {
         setIsClicked( {...initialState, [clicked]:true});
     }
 
-    const setColor = (e) =>{
-        setCurrentColor(e.target.value);
-        localStorage.setItem('colorMode', e.target.value)
+    const setColor = (color) =>{
+        setCurrentColor(color);
+        localStorage.setItem('colorMode', color)
         setThemeSettings(false);        {/* closes themesetting menu when color is selected */}
     }
     const setMode = (e) =>{

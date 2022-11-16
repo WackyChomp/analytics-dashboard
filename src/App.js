@@ -73,7 +73,7 @@ const App = () => {
               <Route path="/kanban" element={<Kanban />} />
 
               {/* Data Visualizations */}
-              <Route path="/area" element="Area" />
+              <Route path="/area" element={<Area />} />
               <Route path="/bar" element="Bar" />
               <Route path="/color-mapping" element="ColorMapping" />
               <Route path="/financial" element="Financial" />

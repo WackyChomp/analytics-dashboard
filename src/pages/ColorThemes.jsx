@@ -10,7 +10,7 @@ const currentColorSelection = (args) =>{
 const ColorThemes = () => {
   return (
     <div className='m-2 md:m-10 p-2 md:p-10 bg-slate-300 rounded-3xl'>
-      <Header title="Color Themes" category="Page"/>
+      <Header title="Color Themes" category="App"/>
       <div className="text-center">
         <div id="preview"/>
         <div className="flex justify-center items-center gap-20 flex-wrap">

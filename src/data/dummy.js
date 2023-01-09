@@ -483,7 +483,7 @@ export const links = [
         icon: <FiEdit />,
       },
       {
-        name: 'color-picker',
+        name: 'color-themes',
         icon: <BiColorFill />,
       },
     ],
